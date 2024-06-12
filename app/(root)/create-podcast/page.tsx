@@ -196,7 +196,7 @@ const CreatePodcast = () => {
             />
           </div>
 
-          <div className=' flex flex-col pt-10 '>
+          <div className=' flex flex-col pt-10   w-full m-auto '>
             <GeneratePodcast
               setAudioStorageId={setAudioStorageId}
               setAudio={setAudioUrl}
@@ -207,7 +207,13 @@ const CreatePodcast = () => {
               setAudioDuration={setAudioDuration}
             />
 
-            <GenerateThumbnail />
+            <GenerateThumbnail
+              setImage={setImageUrl}
+              setImageStorageId={setImageStorageId}
+              image={imageUrl}
+              imagePrompt={imagePrompt}
+              setImagePrompt={setImagePrompt}
+            />
 
             <div className='mt-10 w-full '>
               <Button
