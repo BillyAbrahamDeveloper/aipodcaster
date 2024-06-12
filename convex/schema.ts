@@ -8,18 +8,20 @@ export default defineSchema({
     podcastDescription: v.string(),
     audioUrl: v.optional(v.string()),
     audioStorageId: v.optional(v.id('_storage')),
-    audioDuration: v.number(),
-    voicePrompt: v.string(),
-    voiceType: v.string(),
     imageUrl: v.optional(v.string()),
-    imageStorageId: v.v.optional(v.id('_storage')),
-    imagePrompt: v.string(),
+    imageStorageId: v.optional(v.id('_storage')),
     author: v.string(),
     authorId: v.string(),
     authorImageUrl: v.string(),
+    voicePrompt: v.string(),
+    imagePrompt: v.string(),
+    voiceType: v.string(),
+    audioDuration: v.number(),
     views: v.number(),
-  }),
-
+  })
+    .searchIndex('search_author', { searchField: 'author' })
+    .searchIndex('search_title', { searchField: 'podcastTitle' })
+    .searchIndex('search_body', { searchField: 'podcastDescription' }),
   users: defineTable({
     email: v.string(),
     imageUrl: v.string(),

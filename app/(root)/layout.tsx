@@ -1,7 +1,8 @@
 import LeftSidebar from '@/components/LeftSidebar/LeftSidebar';
 import MobileNav from '@/components/MobileNav';
 import RightSideBar from '@/components/RightSidebar/RightSideBar';
-import Toaster from '@/components/Toaster';
+import { Toaster } from '@/components/ui/toaster';
+
 import Image from 'next/image';
 
 export default function RootLayout({
