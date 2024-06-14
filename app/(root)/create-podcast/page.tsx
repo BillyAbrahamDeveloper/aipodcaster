@@ -103,7 +103,7 @@ const CreatePodcast = () => {
     } catch (error) {
       console.log(error);
       toast({
-        title: 'Error',
+        title: `Error ${error}`,
         variant: 'destructive',
       });
       setIsSubmitting(false);
