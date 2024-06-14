@@ -54,7 +54,7 @@ const LeftSidebar = () => {
       <SignedIn>
         <div className='flex-center w-full pb-14 max-lg:px-4 lg:pr-8'>
           <Button
-            className='text-16 w-full bg-orange-1 font-extrabold'
+            className='text-16 w-full font-extrabold border-orange-1 border-solid border hover:bg-orange-1 hover:text-white-1 text-orange-1 '
             onClick={() => signOut(() => router.push('/'))}
           >
             Log Out
